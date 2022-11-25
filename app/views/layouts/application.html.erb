@@ -14,7 +14,13 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render "shared/splash_page" %>
+    <% if user_signed_in?%>
+      <%= render "shared/navbar" %>
+    <% end %>
+
+    <% unless current_page?(new_user_registration_path) || current_page?(new_user_session_path) %>
+      <%= render "shared/splash_page" %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

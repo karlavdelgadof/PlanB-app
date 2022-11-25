@@ -16,6 +16,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@900&display=swap');
 
-* {
-  color: crimson;
+.splash-brand {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
 }
