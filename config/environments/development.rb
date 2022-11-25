@@ -12,6 +12,7 @@ Rails.application.configure do
     Bullet.add_footer    = true
   end
 
+  config.active_storage.variant_processor = :mini_magick
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
