@@ -1,4 +1,4 @@
-<%= form_with(model: procedure, class: "contents") do |form| %>
+<%= form_with(model: procedure, url: category_procedures_path(params[:category_id]), class: "contents") do |form| %>
   <% if procedure.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
       <h2><%= pluralize(procedure.errors.count, "error") %> prohibited this procedure from being saved:</h2>
@@ -18,7 +18,16 @@
 
   <div class="my-5">
     <%= form.label :amount %>
-    <%= form.text_field :amount, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.number_field :amount, step: :any, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+  </div>
+  
+  <div class="my-5">
+    <%= form.collection_check_boxes :category_ids, Category.all, :id, :name do |b| %>
+      <div class="collection-check-box">
+        <%= b.check_box %>
+        <%= b.label %>
+      </div>
+    <% end %>
   </div>
 
   <div class="inline">
