@@ -16,6 +16,48 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@900&display=swap');
 
+body {
+  text-align: center;
+  height: 100vh;
+}
+
 .splash-brand {
   font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+.navbar {
+  background-image:
+    linear-gradient(
+      180deg,
+      hsl(212deg 56% 49%) 0%,
+      hsl(212deg 54% 47%) 11%,
+      hsl(212deg 54% 46%) 22%,
+      hsl(212deg 52% 44%) 33%,
+      hsl(212deg 51% 43%) 44%,
+      hsl(212deg 50% 41%) 56%,
+      hsl(212deg 49% 39%) 67%,
+      hsl(212deg 48% 38%) 78%,
+      hsl(212deg 47% 36%) 89%,
+      hsl(212deg 45% 35%) 100%
+    );
+  color: #fbfbfb;
+}
+
+.gradient {
+  background-image:
+    linear-gradient(
+      to right,
+      #669dde,
+      #5e96d9,
+      #558fd4,
+      #4d88ce,
+      #4481c9,
+      #3f7cc4,
+      #3977be,
+      #3472b9,
+      #326eb2,
+      #306aab,
+      #2f66a5,
+      #2d629e
+    );
 }
