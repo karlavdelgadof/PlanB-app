@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :categories, dependent: :destroy
   has_many :procedures, dependent: :destroy
 
-  validates :name, :email, :password, presence: true
-  validates :name, :password, uniqueness: true
+  validates :name, :email, :encrypted_password, presence: true
+  validates :name, :encrypted_password, uniqueness: true
 end
