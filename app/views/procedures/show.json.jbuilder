@@ -1,1 +1,1 @@
-json.partial! "procedures/procedure", procedure: @procedure
+json.partial! 'procedures/procedure', procedure: @procedure

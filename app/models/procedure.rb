@@ -4,5 +4,4 @@ class Procedure < ApplicationRecord
   validates :name, :amount, presence: true
   validates :amount, numericality: { greater_than: 0 }
   validates :categories, length: { minimum: 1 }
-
 end
