@@ -1,12 +1,9 @@
 Rails.application.routes.draw do
-  resources :categories
-  resources :procedures
+  resources :categories, only: [:index, :new, :create, :show, :edit, :destroy] do
+    resources :procedures, only: [:new, :create, :destroy]
+  end
   devise_for :users
-  # devise_for :users, skip: :all
-  # devise_scope :user do
-  #   get 'sign_up', to: 'devise/registrations#new'
-  # end
-  root 'static_pages#splash_page', as:'planb'
+  root 'static_pages#splash_page'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
