@@ -1,0 +1,7 @@
+<div>
+  <% unless user_signed_in? %>
+    <h1 class="font-bold text-4xl splash_brand">PlanB</h1>
+    <%= link_to "Sign up", new_user_registration_path %> |
+    <%= link_to "Login", new_user_session_path %>
+  <% end %>
+</div>
