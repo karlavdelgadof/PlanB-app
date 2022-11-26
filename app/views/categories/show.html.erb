@@ -5,11 +5,21 @@
     <% end %>
 
     <%= render @category %>
+    
 
     <%= link_to 'Edit this category', edit_category_path(@category), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
       <%= button_to 'Destroy this category', category_path(@category), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
     <%= link_to 'Back to categories', categories_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+
+    <div class="flex justify-between items-center">
+      <h1 class="font-bold text-4xl">Procedures</h1>
+      <%= link_to 'New procedure', new_category_procedure_path(@category.id), class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    </div>
+
+    <div id="procedures" class="min-w-full">
+      <%= render @procedures %>
+    </div>
   </div>
 </div>
