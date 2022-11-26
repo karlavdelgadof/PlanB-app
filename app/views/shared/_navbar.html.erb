@@ -1,0 +1,10 @@
+<header>
+  <nav id="navbar">
+    <h1 id="logo">PlanB<div></div></h1>
+    <ul>
+    <li><%= link_to 'Home', categories_path %></li>
+    <li><%= link_to 'Transactions', procedures_path %></li>
+    </ul>
+    <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete }, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </nav>
+</header>
