@@ -6,6 +6,6 @@ class Category < ApplicationRecord
   validates :name, uniqueness: true
 
   def icon_resize
-    icon.variant(resize_to_limit: [100, 100]).processed
+    icon.variant(resize_to_limit: [80, 80]).processed
   end
 end
