@@ -14,15 +14,14 @@
  *= require_self
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@900&display=swap');
-
 body {
   text-align: center;
   height: 100vh;
+  background-color: #f5f6f8;
 }
 
 .splash-brand {
-  font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  font-family: var(--font-one);
 }
 
 .navbar,
@@ -41,7 +40,7 @@ body {
       hsl(212deg 47% 36%) 89%,
       hsl(212deg 45% 35%) 100%
     );
-  color: #fbfbfb;
+  color: var(--color-one);
 }
 
 .gradient {
@@ -67,4 +66,48 @@ body {
   height: auto;
   width: 10%;
   transform: rotate(-45deg);
+}
+
+.my-login-btn-c {
+  position: absolute;
+  top: 0.95px;
+  right: 5%;
+  color: var(--color-one);
+  font-size: 0.85rem;
+  font-weight: 300;
+  z-index: 100;
+}
+
+.my-login-btn {
+  z-index: 100;
+  padding: 0.75rem;
+}
+
+.login-d {
+  display: flex;
+  justify-content: space-between;
+  width: 52%;
+}
+
+.remember-btn {
+  margin-top: 1.5rem;
+  align-self: start;
+  text-align: end;
+  font-size: 0.85rem;
+}
+
+.login-q {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.login-q:hover {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.sign-up-btn {
+  color: #2d629e;
+  font-weight: 700;
+  padding: 0.5rem;
 }

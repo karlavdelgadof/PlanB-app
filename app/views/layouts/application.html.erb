@@ -16,9 +16,8 @@
     <% if user_signed_in?%>
       <%= render "shared/navbar" %>
     <% end %>
-    <% if notice.present? || alert.present? %>
+    <% if notice.present? %>
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-      <p class="alert p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800"><%= alert %></p>
     <% end %>
     
     <% unless current_page?(new_user_registration_path) || current_page?(new_user_session_path) %>

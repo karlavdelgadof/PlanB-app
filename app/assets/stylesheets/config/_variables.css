@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@900&display=swap');
+
+:root {
+  --font-one: 'Zen Kaku Gothic Antique', sans-serif;
+  --font-two: 'Barlow Condensed', sans-serif;
+  --font-color-1: #1f1f1f;
+  --color-one: #fbfbfb;
+  --color-two: #f5f5f5;
+  --color-three: #f16038;
+}
