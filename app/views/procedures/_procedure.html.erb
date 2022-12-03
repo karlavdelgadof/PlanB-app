@@ -1,12 +1,11 @@
-<div id="<%= dom_id procedure %>">
+<div id="<%= dom_id procedure %>" class="w-full flex p-4 flex-col text-left bg-white items-start">
   <p class="my-5">
     <strong class="block font-medium mb-1">Name:</strong>
     <%= procedure.name %>
   </p>
 
   <p class="my-5">
-    <strong class="block font-medium mb-1">Amount:</strong>
-    <%= procedure.amount %>
+    <strong class="block font-medium mb-1">Amount:</strong>$<%= procedure.amount %>
   </p>
 
   <p class="my-5">
