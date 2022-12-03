@@ -18,6 +18,7 @@ body {
   text-align: center;
   height: 100vh;
   background-color: #f5f6f8;
+  font-family: var(--font-two);
 }
 
 .splash-brand {
@@ -116,7 +117,7 @@ body {
 .menu {
   background-color: skyblue;
   position: absolute;
-  height: 100vh;
+  height: 150vh;
   width: 50%;
   top: 0;
   right: 50%;
@@ -131,4 +132,42 @@ body {
 
 .space-b {
   justify-content: space-between;
+}
+
+.shadow {
+  box-shadow: 0 12px 15px 9px rgba(207, 207, 207, 1);
+}
+
+.welcome {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-image:
+    linear-gradient(
+      to right,
+      #669dde,
+      #5e96d9,
+      #558fd4,
+      #4d88ce,
+      #4481c9,
+      #3f7cc4,
+      #3977be,
+      #3472b9,
+      #326eb2,
+      #306aab,
+      #2f66a5,
+      #2d629e
+    );
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.mini-header {
+  position: absolute;
+  top: 7.2%;
+  left: 0;
+  width: 100%;
+  background: #ffff;
+  padding: 0.5rem;
+  box-shadow: 0 20px 15px -2px rgba(207, 207, 207, 1);
 }
