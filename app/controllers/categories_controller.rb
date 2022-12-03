@@ -9,6 +9,11 @@ class CategoriesController < ApplicationController
   # GET /categories/1 or /categories/1.json
   def show
     @procedures = @category.procedures.order(created_at: :desc)
+    amounts = []
+    @procedures.each do |procedure|
+      amounts.push(procedure.amount)
+    end
+    @sum = amounts.sum
   end
 
   # GET /categories/new
