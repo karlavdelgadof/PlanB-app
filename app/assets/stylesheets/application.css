@@ -25,7 +25,8 @@ body {
 }
 
 .navbar,
-.common-h {
+.common-h,
+.menu {
   background-image:
     linear-gradient(
       180deg,
@@ -110,4 +111,24 @@ body {
   color: #2d629e;
   font-weight: 700;
   padding: 0.5rem;
+}
+
+.menu {
+  background-color: skyblue;
+  position: absolute;
+  height: 100vh;
+  width: 50%;
+  top: 0;
+  right: 50%;
+  padding: 3rem 2rem;
+  transform: translateX(0);
+  transition: transform 0.3s linear;
+}
+
+.menu-btn {
+  z-index: 100;
+}
+
+.space-b {
+  justify-content: space-between;
 }
