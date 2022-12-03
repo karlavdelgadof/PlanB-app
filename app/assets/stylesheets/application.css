@@ -25,7 +25,8 @@ body {
   font-family: 'Zen Kaku Gothic Antique', sans-serif;
 }
 
-.navbar {
+.navbar,
+.common-h {
   background-image:
     linear-gradient(
       180deg,
@@ -60,4 +61,10 @@ body {
       #2f66a5,
       #2d629e
     );
+}
+
+.splash-logo {
+  height: auto;
+  width: 10%;
+  transform: rotate(-45deg);
 }
