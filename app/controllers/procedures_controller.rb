@@ -1,10 +1,9 @@
 class ProceduresController < ApplicationController
   before_action :set_procedure, only: %i[show edit update destroy]
 
-
   # GET /procedures or /procedures.json
   # def index
-  #   @procedures = Procedure.all 
+  #   @procedures = Procedure.all
   #   # @category = Category.find(params[:category_id])
   #   # @procedures = @category.procedures.order(created_at: :desc)
   # end
@@ -71,6 +70,6 @@ class ProceduresController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def procedure_params
-    params.require(:procedure).permit(:name, :amount, :user_id, category_ids:[] )
+    params.require(:procedure).permit(:name, :amount, :user_id, category_ids: [])
   end
 end
