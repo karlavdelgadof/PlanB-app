@@ -1,31 +1,39 @@
-<h2 class="common-h">Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full name" %>
+<div class="common-h p-3 border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 navbar">
+  <div class="login-d text-center items-center width-5">
+    <%= link_to :back do %>
+      <%= image_tag("chevron-left-regular-24.png") %>
+    <% end %>
+    <h2>SIGN UP</h2>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
-  </div>
+<div class="p-8 mt-4 bg-white border border-slate-200 mb-6">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
-  </div>
+    <div class="field">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full name", class: "block py-3 px-0 w-full text-sm text-gray-900 bg-transparent border border-white border-b-slate-300 dark:text-white dark:focus:bg-sky-100 focus:outline-none focus:bg-sky-100 peer placeholder-gray-500 placeholder-opacity-75" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password confirmation" %>
-  </div>
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "block py-3 px-0 w-full text-sm text-gray-900 bg-transparent border border-white border-b-slate-300 dark:text-white dark:focus:bg-sky-100 focus:outline-none focus:bg-sky-100 peer placeholder-gray-500 placeholder-opacity-75"%>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+    <div class="mt-4 field flex flex-col">
+      <% if @minimum_password_length %>
+      <em class="text-slate-400 self-end">*<%= @minimum_password_length %> characters minimum</em>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "block py-3 px-0 w-full text-sm text-gray-900 bg-transparent border border-white border-b-slate-300 dark:text-white dark:focus:bg-sky-100 focus:outline-none focus:bg-sky-100 peer placeholder-gray-500 placeholder-opacity-75"%>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password confirmation", class: "block py-3 px-0 w-full text-sm text-gray-900 bg-transparent border border-white border-b-slate-300 dark:text-white dark:focus:bg-sky-100 focus:outline-none focus:bg-sky-100 peer placeholder-gray-500 placeholder-opacity-75"%>
+    </div>
+
+    <div class="actions my-login-btn-c">
+      <%= f.submit "Sign up", class:"z-30 py-3.5" %>
+    </div>
+  <% end %>
+</div>
 
 <%= render "devise/shared/links" %>

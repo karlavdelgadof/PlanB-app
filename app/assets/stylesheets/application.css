@@ -171,3 +171,18 @@ body {
   padding: 0.5rem;
   box-shadow: 0 20px 15px -2px rgba(207, 207, 207, 1);
 }
+
+.width-5 {
+  width: 55%;
+}
+
+.back-btn-c {
+  position: absolute;
+  top: 14%;
+  color: black;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+}
