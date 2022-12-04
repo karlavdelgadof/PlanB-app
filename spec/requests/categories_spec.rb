@@ -18,10 +18,10 @@ RSpec.describe '/categories', type: :request do
   # adjust the attributes here as well.
 
   let(:valid_attributes) do
-    ('Add a hash of attributes valid for your model')
+    'Add a hash of attributes valid for your model'
   end
 
   let(:invalid_attributes) do
-    ('Add a hash of attributes invalid for your model')
+    'Add a hash of attributes invalid for your model'
   end
 end

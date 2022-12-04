@@ -17,10 +17,10 @@ RSpec.describe '/procedures', type: :request do
   # Procedure. As you add validations to Procedure, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) do
-    ('Add a hash of attributes valid for your model')
+    'Add a hash of attributes valid for your model'
   end
 
   let(:invalid_attributes) do
-    ('Add a hash of attributes invalid for your model')
+    'Add a hash of attributes invalid for your model'
   end
 end
