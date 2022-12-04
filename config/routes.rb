@@ -1,3 +1,5 @@
+Rails.application.routes.default_url_options[:host] = "XXX"
+
 Rails.application.routes.draw do
   resources :categories, only: [:index, :new, :create, :show, :edit, :destroy] do
     resources :procedures, only: [:new, :create, :destroy]
