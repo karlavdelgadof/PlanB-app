@@ -1,17 +1,19 @@
 class ProceduresController < ApplicationController
   before_action :set_procedure, only: %i[show edit update destroy]
 
-  # GET /procedures or /procedures.json
-  def index
-    @procedures = Procedure.all
-  end
 
-  # GET /procedures/1 or /procedures/1.json
-  def show; end
+  # GET /procedures or /procedures.json
+  # def index
+  #   @procedures = Procedure.all 
+  #   # @category = Category.find(params[:category_id])
+  #   # @procedures = @category.procedures.order(created_at: :desc)
+  # end
 
   # GET /procedures/new
   def new
     @procedure = Procedure.new
+    # @procedure.categories << @category
+    # @categories = current_user.categories
   end
 
   # GET /procedures/1/edit
@@ -20,10 +22,11 @@ class ProceduresController < ApplicationController
   # POST /procedures or /procedures.json
   def create
     @procedure = Procedure.new(procedure_params)
+    @procedure.user_id = current_user.id
 
     respond_to do |format|
       if @procedure.save
-        format.html { redirect_to procedure_url(@procedure), notice: 'Procedure was successfully created.' }
+        format.html { redirect_to category_path(params[:category_id]), notice: 'Procedure was successfully created.' }
         format.json { render :show, status: :created, location: @procedure }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -62,8 +65,12 @@ class ProceduresController < ApplicationController
     @procedure = Procedure.find(params[:id])
   end
 
+  # def set_category
+  #   @category = Category.find(params[:category_id])
+  # end
+
   # Only allow a list of trusted parameters through.
   def procedure_params
-    params.require(:procedure).permit(:name, :amount)
+    params.require(:procedure).permit(:name, :amount, :user_id, category_ids:[] )
   end
 end

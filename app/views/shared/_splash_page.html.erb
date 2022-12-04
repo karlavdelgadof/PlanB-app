@@ -1,7 +1,16 @@
-<div>
-  <% unless user_signed_in? %>
-    <h1 class="font-bold text-4xl splash_brand">PlanB</h1>
-    <%= link_to "Sign up", new_user_registration_path %> |
-    <%= link_to "Login", new_user_session_path %>
-  <% end %>
-</div>
+<% unless user_signed_in? %>
+  <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="w-full flex-col max-w-md space-y-8 justify-items-center">
+      <div>
+        <%= image_tag("splash_logo.png", class: "inline-block splash-logo") %>
+        <h1 class="mt-6 text-3xl font-bold tracking-tight text-gray-900">PlanB</h1>
+      </div>
+
+      <div class="flex flex-col">
+        <%= link_to "LOGIN", new_user_session_path, class: "gradient group relative flex w-full justify-center rounded-md border border-transparent py-2 px-4 text-lg font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" %>
+        <%= link_to "SIGN UP", new_user_registration_path, class: "group relative flex w-full justify-center rounded-md py-2 px-4 text-lg text-gray-300 font-medium hover:bg-gray-100 hover:text-blue-500 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+

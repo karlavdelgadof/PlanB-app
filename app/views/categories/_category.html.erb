@@ -1,17 +1,25 @@
-<div id="<%= dom_id category %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
-    <%= category.name %>
-  </p>
+<%= link_to category_path(category.id) do %>
+  <div id="<%= dom_id category %>" class="w-full flex p-4 bg-white shadow">
+  
+    <p class="my-5">
+      <%= image_tag(category.icon_resize, class: "object-cover rounded-t-lg md:rounded-none md:rounded-l-lg") %>
+    </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Icon:</strong>
-    <%= image_tag(category.icon_resize) %>
-  </p>
+    <div class="category-txt flex-auto flex flex-col start pl-6 gap-6">
+      <div class="flex space-b text-center">
+        <h2 class="mb-2 text-xl font-bold tracking-tight text-left text-gray-500 dark:text-white max-w-[25%]"><%= category.name %></h2>
 
-  <% if action_name != "show" %>
-    <%= link_to "Show this category", category, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this category', edit_category_path(category), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
-  <% end %>
-</div>
+        <p class="flex mt-1 gap-2 font-semibold text-slate-700">
+          <strong class="block mb-1">Total Transactions:</strong>
+          <%= category.procedures.length %>
+        </p>
+      </div>
+
+      <% if action_name != "show" %>
+        <%= link_to "See all transactions", category_path(category.id), class: "py-3 text-right text-slate-400 inline-block font-medium" %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+

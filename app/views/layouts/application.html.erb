@@ -8,16 +8,18 @@
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags :defaults%>
+    <%= favicon_link_tag asset_path('favicon-32x32.png') %>
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <% if user_signed_in?%>
       <%= render "shared/navbar" %>
     <% end %>
-
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+    
     <% unless current_page?(new_user_registration_path) || current_page?(new_user_session_path) %>
       <%= render "shared/splash_page" %>
     <% end %>

@@ -1,26 +1,30 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="common-h p-3 border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 navbar">
+  <div class="login-d">
+    <%= image_tag("chevron-left-regular-24.png") %>
+    <h2>LOGIN</h2>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<div class="p-4 mt-4 bg-white border border-slate-200 mb-6">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field relative z-0 mb-6 w-full group">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border border-white border-b-slate-300 dark:text-white dark:focus:bg-sky-100 focus:outline-none focus:bg-sky-100 peer placeholder-gray-500 placeholder-opacity-75" %>
     </div>
-  <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border border-white border-b-slate-300 dark:text-white dark:focus:bg-sky-100 focus:outline-none focus:bg-sky-100 peer placeholder-gray-500 placeholder-opacity-75" %>
+    </div>
 
+    <% if devise_mapping.rememberable? %>
+      <div class="field remember-btn">
+        <%= f.check_box :remember_me, class: "w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"%>
+        <%= f.label :remember_me, class: "text-gray-700" %>
+      </div>
+    <% end %>
+
+    <div class="actions my-login-btn-c">
+      <%= f.submit "Log in", class:"my-login-btn"%>
+    </div>
+    <% end %>
+</div>
 <%= render "devise/shared/links" %>
