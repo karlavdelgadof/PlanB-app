@@ -1,22 +1,10 @@
 class ProceduresController < ApplicationController
   before_action :set_procedure, only: %i[show edit update destroy]
 
-  # GET /procedures or /procedures.json
-  # def index
-  #   @procedures = Procedure.all
-  #   # @category = Category.find(params[:category_id])
-  #   # @procedures = @category.procedures.order(created_at: :desc)
-  # end
-
   # GET /procedures/new
   def new
     @procedure = Procedure.new
-    # @procedure.categories << @category
-    # @categories = current_user.categories
   end
-
-  # GET /procedures/1/edit
-  def edit; end
 
   # POST /procedures or /procedures.json
   def create
