@@ -1,0 +1,33 @@
+<div class="mt-24 md:w-2/3 w-full flex justify-center">
+  <div class="w-[90%] flex flex-col gap-6 shadow-none">
+    <div class="inline-block ml-2 self-end">
+      <%= button_to 'Destroy this category', category_path(@category), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-red-500 font-medium text-white" %>
+    </div>
+    <div id="<%= dom_id @category %>" class="w-full flex p-4 bg-white shadow">
+  
+      <p class="my-5">
+        <%= image_tag(@category.icon_resize, class: "w-[65%]") %>
+      </p>
+
+      <div class="category-txt flex-auto flex flex-col start gap-6 justify-center">
+        <div class="flex space-b text-center">
+          <h2 class="mb-2 text-xl font-bold tracking-tight text-left text-gray-500 dark:text-white"><%= @category.name %></h2>
+
+          <p class="flex mt-1 gap-2 font-semibold text-slate-700">
+            <strong class="block mb-1">Total: </strong>$<%= @sum %>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <%= link_to 'Back to categories', categories_path, class: "ml-2 rounded-lg py-3 hidden px-5 bg-gray-100 inline-block font-medium" %>
+
+    <div class="inline-block ml-2 self-end">
+      <%= link_to 'New Transaction', new_category_procedure_path(@category.id), class: "rounded-lg py-3 px-5 gradient text-white block font-medium" %>
+    </div>
+
+    <div id="procedures" class="min-w-full">
+      <%= render @procedures %>
+    </div>
+  </div>
+</div>

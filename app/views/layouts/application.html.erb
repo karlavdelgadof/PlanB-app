@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PlanB App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= favicon_link_tag asset_path('favicon-32x32.png') %>
+    <%= javascript_importmap_tags :defaults%>
+  </head>
+
+  <body>
+    <% if user_signed_in?%>
+      <%= render "shared/navbar" %>
+    <% end %>
+    
+    <% if current_page?(root_path)%>
+      <%= render "shared/splash_page" %>
+    <% end %>
+    <%= yield %>
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+    
+    <% if alert.present? %>
+      <p class="alert py-2 px-3 bg-red-300 mb-5 text-red-500 font-medium rounded-lg inline-block"><%= alert %></p>
+    <% end %>
+  </body>
+</html>

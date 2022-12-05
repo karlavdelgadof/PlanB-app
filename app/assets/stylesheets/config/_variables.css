@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
+:root {
+  --font-one: 'Zen Kaku Gothic Antique', sans-serif;
+  --font-two: 'Proxima Nova', sans-serif;
+  --color-one: #f1f3f2;
+  --color-two: #989da3;
+}

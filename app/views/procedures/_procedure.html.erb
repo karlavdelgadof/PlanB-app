@@ -1,0 +1,24 @@
+<div id="<%= dom_id procedure %>" class="w-full flex p-4 flex-col text-left bg-white items-start">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= procedure.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Amount:</strong>$<%= procedure.amount %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Categories:</strong>
+    <div>
+      <% procedure.categories.each do  |category|%>
+        <span class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"><%= category.name %></span>
+      <% end %>
+    <div>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this procedure", category_procedure_path(@category.id, procedure.id), class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
