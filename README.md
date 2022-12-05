@@ -5,7 +5,7 @@
 ![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white) ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Rails](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
 
 
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>PlanB App 📲🏦💸📝</b></h3>
@@ -78,11 +78,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[Create category to group transactions]**
+- **[Create transaction with multiple categories]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -147,9 +145,7 @@ To run tests:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[Allow user to upload avatar]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,6 +174,6 @@ If you like this project or find it useful/interesting, please make sure you giv
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
