@@ -78,11 +78,13 @@ body {
   font-size: 0.85rem;
   font-weight: 300;
   z-index: 100;
+  cursor: pointer;
 }
 
 .my-login-btn {
   z-index: 100;
   padding: 0.75rem;
+  cursor: pointer;
 }
 
 .login-d {
